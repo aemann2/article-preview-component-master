@@ -43,33 +43,60 @@ body {
   display: flex;
   border-radius: 20px;
   width: 1350px;
+  background-color: white;
 }
 
 .photo {
   &__img {
-    height: 400px;
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px 0px 0px 20px;
   }
 }
 
 .text {
-  padding: 5rem;
+  padding: 3rem 5rem;
+  color: $main-color;
 
   &__header {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: $heading-color;
   }
 
   &__body {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   &__footer {
-    display: flex;
     &__img {
       height: 6rem;
+      margin-right: 2rem;
       border-radius: 50%;
+      float: left;
+    }
+
+    &__name {
+      color: $heading-color;
+    }
+
+    &__date {
+      font-size: 1.5rem;
+    }
+
+    &__share {
+      background-color: $main-bg;
+      border: none;
+      border-radius: 50%;
+      float: right;
+      padding: 1rem;
+      margin-top: -3rem;
+    }
+
+    &__share:hover {
+      cursor: pointer;
     }
   }
 
