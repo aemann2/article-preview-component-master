@@ -3,9 +3,9 @@
 // Variables
 
 $heading-color: rgb(72, 85, 106);
-$main-color: hsl(214, 17%, 51%);
-$arrow-color: hsl(212, 23%, 69%);
-$main-bg: hsl(210, 46%, 95%);
+$main-color: rgb(109, 127, 151);
+$arrow-color: rgb(158, 175, 194);
+$main-bg: rgb(236, 242, 248);
 
 // Globals
 
@@ -44,6 +44,8 @@ body {
   border-radius: 20px;
   width: 900px;
   background-color: white;
+  -webkit-box-shadow: 7px 9px 21px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 9px 21px -1px rgba(0, 0, 0, 0.2);
 }
 
 .photo {
@@ -73,6 +75,7 @@ body {
 
   &__footer {
     font-size: 1.4rem;
+
     &__img {
       height: 4rem;
       margin-right: 2rem;
@@ -105,7 +108,35 @@ body {
   }
 
   &__aside {
-    display: none;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    bottom: 30%;
+    left: 79%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 20em;
+    background-color: $heading-color;
+    letter-spacing: 0.5rem;
+    -webkit-box-shadow: 7px 9px 21px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 9px 21px -1px rgba(0, 0, 0, 0.2);
+    transition: display 0s, opacity 0.2s;
+  }
+
+  // triangle @ the bottom of share box...lifted straight off of S.O.
+  &__aside:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    width: 0;
+    height: 0;
+    border-top: solid 15px $heading-color;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
   }
 }
 
@@ -119,3 +150,6 @@ body {
 }
 
 // Media queries //
+
+@media only screen and (max-width: 1050px) {
+}
