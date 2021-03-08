@@ -1,4 +1,4 @@
-# [Frontend Mentor] - Article preview component(https://jovial-darwin-359719.netlify.app/)
+# [Frontend Mentor -- Article preview component](https://jovial-darwin-359719.netlify.app/)
 
 ## Background
 
